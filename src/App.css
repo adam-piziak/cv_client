@@ -1,5 +1,37 @@
+
 .App {
   text-align: center;
+}
+
+
+.create-lobby-page b {
+  display: block;
+  width: 270px;
+  margin: auto;
+  margin-top: 200px;
+}
+.join-container {
+  padding: 20px
+}
+
+.join-container input {
+  margin-bottom: 20px;
+}
+
+
+.home-btn {
+  display: block;
+  width: 50%;
+  margin: 20px auto;
+}
+.home-wrapper h1 {
+  margin-bottom: 40px
+}
+.home-wrapper {
+  display: block;
+  width: 500px;
+  margin: auto;
+  margin-top: 20vh
 }
 
 .App-logo {
