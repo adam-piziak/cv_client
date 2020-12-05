@@ -12,7 +12,7 @@ const RIGHT = 3
 let gGameKey = ""
 let gPlayerKey = ""
 //const socket = io('http://127.0.0.1:5000');
-const socket = io('http://165.22.187.65:5000');
+const socket = io('http://165.22.187.65');
 
 
 class Game extends React.Component {
