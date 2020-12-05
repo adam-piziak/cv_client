@@ -2,7 +2,7 @@
   "name": "bridge-client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://adam-piziak.github.io/cv_client/",
+  "homepage": "https://adam-piziak.github.io/cv-client",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",

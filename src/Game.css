@@ -1,7 +1,8 @@
 .game-cont {
   height: 100vh;
   position: relative;
-  background: #EEEEEE;
+  background: #222226;
+  color: #EEE;
 }
 
 .invite-code {
@@ -26,9 +27,10 @@
 .player {
   display: block;
   position: absolute;
-  background: #DDD;
+  border: 1px solid #333;
+  background: #25252A;
   width: 500px;
-  border-radius: 10px;
+  border-radius: 5px;
   overflow: hidden;
 }
 
@@ -56,6 +58,19 @@
   right: 50px;
   bottom: 50px;
   padding: 0;
+}
+
+.player-main.player-turn {
+  position: absolute;
+  padding-left: 60px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  padding-top: 10px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  border: 2px solid black;
 }
 
 .player-main.player-turn .turn-message {
@@ -99,7 +114,7 @@
 }
 
 .player-spot {
-  background: #263238;
+  background: #111;
   color: #82B1FF;
   padding: 10px;
   padding-left: 20px;
@@ -113,6 +128,7 @@
 
 .op-container {
   position: relative;
+  margin: 8px;
   padding-left: calc(100%/12);
 }
 .op-card {

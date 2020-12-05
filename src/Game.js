@@ -11,7 +11,8 @@ const RIGHT = 3
 
 let gGameKey = ""
 let gPlayerKey = ""
-const socket = io('http://165.22.187.65/');
+//const socket = io('http://127.0.0.1:5000');
+const socket = io('http://165.22.187.65:5000');
 
 
 class Game extends React.Component {
@@ -81,9 +82,11 @@ class Game extends React.Component {
     return (
       <div className="game-cont">
         <div className="invite-code">
-          Invite code: {this.props.invite_code}
-          <br/>
           {this.state.user.name}
+          <br/>
+
+          <br/>
+          Invite code: {this.props.invite_code}
         </div>
         <div className="game-area">
           <div className="player left">
@@ -118,7 +121,9 @@ function OponentCards(props) {
   const cards = props.cards
   if (cards != null) {
     const cardItems = cards.sort((a,b) => a - b).map((card) => {
-      const backgroundFile = "cards/" + card + ".png"
+      //let backgroundFile = "cards/" + card + ".png"
+      let backgroundFile = "cards/back2.jpg"
+
 
       return (
         <img className="op-card" alt="card" key={card.toString()} src={backgroundFile} />
@@ -136,14 +141,25 @@ function OponentCards(props) {
 
 function PlayerComponent(props) {
     if (props.player != null) {
-      let backgroundFile = "cards/" + props.player.card_played + ".png"
-      return (
-        <div>
-          <div className="player-spot"> {props.player.name} </div>
-          <OponentCards cards={props.player.cards} />
-          <img className="op-card-played" alt={backgroundFile} key={backgroundFile} src={backgroundFile} />
-        </div>
-      )
+      let card = props.player.card_played
+      let backgroundFile = "cards/" + card + ".png"
+      //backgroundFile = "cards/back2.jpg"
+      if (card < 0) {
+        return (
+          <div>
+            <div className="player-spot"> {props.player.name} </div>
+            <OponentCards cards={props.player.cards} />
+          </div>
+        )
+      } else {
+        return (
+          <div>
+            <div className="player-spot"> {props.player.name} </div>
+            <OponentCards cards={props.player.cards} />
+            <img className="op-card-played" alt={backgroundFile} key={backgroundFile} src={backgroundFile} />
+          </div>
+        )
+      }
     } else {
       return (
         <div className="player-spot free">Open</div>
