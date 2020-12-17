@@ -1,0 +1,131 @@
+$player-margin: 10px
+$card-width: 115px
+$turn-color: #666
+
+@keyframes pulse
+  0%
+    background: white
+  100%
+    background: #2e3236
+    color: white
+
+
+.player
+  position: absolute
+  background: #FFF
+  border: 1px solid #CCC
+  padding: 5px
+  border-radius: 6px
+  overflow: hidden
+  padding: 10px 16px
+  min-width: 300px
+  transition: .15s
+  //box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2)
+
+
+  &.player-turn
+    border: 1px solid #42484e
+    background: #42484e
+    color: white
+
+    &.winner
+      border: 1px solid #4c7ed2
+      background: #4c7ed2
+
+    //color: white
+    //box-shadow: 0 1px 8px rgba(0, 0, 0, 0.8)
+
+
+  &.p1
+    left: $player-margin
+    top: 50vh
+    transform: translateY(-50%)
+
+
+  &.p2
+    top: $player-margin
+    left: 50vw
+    transform: translateX(-50%)
+
+  &.p3
+    right: $player-margin
+    top: 50vh
+    transform: translateY(-50%)
+
+  &.p0
+    bottom: $player-margin
+    left: 50vw
+    transform: translateX(-50%)
+
+.player-hand
+  padding: 0px 0px
+  margin: 0
+  margin-bottom: 0
+  padding-bottom: 0
+
+.player-card
+  vertical-align: bottom
+  width: $card-width
+  transform: translateY(0px)
+  transition: 0.15s
+  border-radius: 7px
+  border: 1px solid #DDD
+  margin-bottom: 1px
+
+  &:not(:first-child)
+    margin-left: -$card-width*0.9
+
+    &.visible
+      margin-left: -$card-width*0.6
+
+  &.visible
+    -webkit-filter: grayscale(0%)
+    border-radius: 0
+    border: 0
+
+.controllable .player-card:hover
+    cursor: pointer
+    transition: 0.02s
+    transform: translateY(-15px)
+
+
+.player-header
+  display: flex
+  align-items: flex-end
+  margin-bottom: 12px
+  font-weight: bold
+  font-size: 1rem
+.dummy
+  font-weight: 500
+  opacity: 0.7
+  margin-left: auto
+
+.declarer
+  font-weight: 500
+  margin-left: auto
+  opacity: 0.7
+
+.bot
+  margin-right: 10px
+  position: absolute
+  right: 0
+
+.player-name
+  font-weight: normal
+  opacity: 0.9
+  font-size: 1rem
+  text-transform: capitalize
+  margin-right: 10px
+
+.player-info
+  display: flex
+  align-items: flex-end
+  padding-bottom: 4px
+  flex-grow: 1
+  align-self: stretch
+
+.player-points
+  display: inline-block
+  font-weight: 900
+  font-size: 1.6rem
+  margin-right: 12px

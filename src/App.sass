@@ -1,0 +1,89 @@
+$main-bk: #FFF
+$accent: #486fbb
+$accent-dark: #4064ac
+
+.home
+  height: 100vh
+  width: 100vw
+  overflow: hidden
+  background: $main-bk
+
+.join-container
+  position: absolute
+  left: 50%
+  transform: translateX(-50%)
+  padding: 20px
+  border-radius: 4px
+  top: 20vh
+
+  input
+    display: block
+    margin-bottom: 10px
+    padding: 7px 5px
+    outline: 0
+    border: 1px solid #DDD
+    border-radius: 4px
+    text-indent: 10px
+
+  button
+    width: 100%
+    padding: 10px 6px
+    border: 0
+    outline: 0
+    border-radius: 4px
+    background: #DDD
+
+    &:hover
+      background: #CCC
+      cursor: pointer
+
+      &:active
+        background: #BBB
+
+
+
+.home-container
+  display: block
+  width: 500px
+  margin: auto
+  margin-top: 20vh
+
+  h1
+    text-align: center
+    margin: 0
+    display: block
+    font-size: 2.5rem
+    margin-bottom: 30px
+    color: #424242
+
+  button
+    display: block
+    margin: auto
+    padding: 10px 20px
+    border: none
+    text-decoration: none
+    -webkit-appearance: none
+    -moz-appearance: none
+    margin-bottom: 12px
+    background: #CCC
+    color: #444
+    min-width: 160px
+    border-radius: 2px
+    outline: none
+
+    &:hover
+      cursor: pointer
+      background: #CCC
+      transform: scale(1.07)
+
+    &:active
+      transform: scale(1.02)
+
+    &:first-of-type
+      background: $accent
+      color: white
+      font-weight: bolder
+
+
+      &:hover
+        background: $accent-dark

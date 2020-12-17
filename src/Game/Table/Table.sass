@@ -1,0 +1,40 @@
+$card-width: 120px
+
+.table-container
+  width: $card-width*4
+  position: absolute
+  left: 50vw
+  top: 50vh
+  transform: translate(-50%, -50%)
+
+.table
+  position: relative
+  height: 400px
+
+.table-card
+  position: absolute
+  vertical-align: bottom
+  width: $card-width
+  visibility: hidden
+
+  &.played
+    visibility: visible
+
+  &.p1
+    top: 50%
+    transform: translateY(-50%)
+
+  &.p2
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+
+  &.p3
+    right: 0
+    top: 50%
+    transform: translateY(-50%)
+
+  &.p0
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)

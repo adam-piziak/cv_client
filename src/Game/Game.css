@@ -24,62 +24,6 @@
   width: 100%;
 }
 
-.player {
-  display: block;
-  position: absolute;
-  border: 1px solid #333;
-  background: #25252A;
-  width: 500px;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.player.top {
-  left: 50%;
-  top: 40px;
-  transform: translateX(-50%);
-}
-
-.player.left {
-  left: 40px;
-  top: 40%;
-  transform: translateY(-50%);
-}
-
-.player.right {
-  top: 40%;
-  right: 40px;
-  transform: translateY(-50%);
-}
-
-.player-main {
-  position: absolute;
-  left: 60px;
-  right: 50px;
-  bottom: 50px;
-  padding: 0;
-}
-
-.player-main.player-turn {
-  position: absolute;
-  padding-left: 60px;
-  padding-right: 50px;
-  padding-bottom: 50px;
-  padding-top: 10px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #000;
-  border: 2px solid black;
-}
-
-.player-main.player-turn .turn-message {
-  visibility: visible;
-}
-
-.player-main .turn-message {
-  visibility: hidden;
-}
 .container {
   height: 100%;
   width: 100vw;
@@ -98,7 +42,7 @@
 .my-card {
   width: calc(100vw / 14);
   border-radius: 5px;
-  margin-left: calc(-100vw / (14*5));
+  margin-left: calc(-100vw / (14*2));
   transform: rotate(0deg);
   object-fit: cover;
   transition: .2s;

@@ -1,0 +1,80 @@
+.create-lobby-page
+  position: relative
+  background: white
+  height: 100vh
+
+.create-lobby-container
+  position: absolute
+  left: 50vw
+  top: 10vh
+  transform: translateX(-50%)
+
+.create-lobby
+  position: relative
+  margin-left: 0
+
+.tablez
+  position: relative
+  height: 300px
+  width: 600px
+  border-radius: 10px
+  margin-bottom: 20px
+
+  .player-position
+    position: absolute
+    height: 50px
+
+    &.west
+      top: 50%
+      transform: translateY(-50%)
+
+    &.north
+      left: 50%
+      transform: translateX(-50%)
+
+    &.south
+      left: 50%
+      bottom: 0
+      transform: translateX(-50%)
+
+    &.east
+      top: 50%
+      right: 0
+      transform: translateY(-50%)
+
+.host-name
+  width: 350px
+  display: block
+  margin-top: 5px
+  margin-bottom: 20px
+  border-radius: 10px
+  margin-left: 50%
+  transform: translateX(-50%)
+  text-indent: 10px
+  box-sizing: border-box
+
+  &:focus
+    background: #DDD
+
+.drl-dropdown.cp
+  background: white
+  position: relative
+  z-index: 0
+  font-weight: bold
+
+  &:hover
+    z-index: 10
+
+.Dropdown-title
+  color: blue
+
+.Dropdown-option
+  font-weight: normal
+
+.Dropdown-option:hover
+  background-color: #444
+  color: #FFF
+
+.Dropdown-option.is-selected
+  background-color: #666
+  color: #FFF
